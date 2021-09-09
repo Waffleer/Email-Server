@@ -1,14 +1,11 @@
 
+receiver_email = ["",""]
 
+#This is an unused variable for extra emails
+other_email = [""]
 
+#sends each email each message
+messageA = ["lol",""]
 
-
-
-
-receiver_email = ["nicholas.doboszenski@tgeagle.org","samuel.kennedy@tgeagle.org","akhil.kanayinkal@tgeagle.org"]
-
-other_email = ["jake.busse@tgeagle.org"]
-
-messageA = ["lol","Akhil Told me to send this to you"]
-
-totalLoopNum = 5
+#how many times it runs, if you put it to negetive 1 it will run until you stop it
+totalLoopNum = 1

@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "activation-jaf1.1.1.jar",
-        "javamail-1.4.5.jar"
-    ]
-}

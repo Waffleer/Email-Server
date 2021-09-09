@@ -6,12 +6,6 @@ from credentials import sleepTimer
 from credentials import smtp_server, port, password, sender
 from config import receiver_email, messageA, totalLoopNum
 
-def infoRead():
-    file = open("info.txt","r")
-    print(file.readlines(0))
-
-    
-
 mainloop = True
 loopnum = 0
 
@@ -29,9 +23,7 @@ print("")
 if send == True:
     try:
         server = smtplib.SMTP(smtp_server,port)
-        #server.ehlo() # Can be omitted
         server.starttls(context=context) # Secure the connection
-        #server.ehlo() # Can be omitted
         server.login(sender, password)
 
         print("Connection Complete\n")
@@ -48,8 +40,9 @@ if send == True:
                 y = 0
                 for z in messageA:
                     message = messageA[y]
-                    server.sendmail(sender, receiver, message)
-                    print(f"sent message {y + 1} to {receiver}")
+                    if receiver != "nicholas.doboszenski@tgeagle.org":
+                      server.sendmail(sender, receiver, message)
+                      print(f"sent message {y + 1} to {receiver}")
                     y += 1
 
                 x += 1
